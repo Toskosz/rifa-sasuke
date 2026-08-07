@@ -1,10 +1,8 @@
 # Fotos do Sasuke
 
-Coloque as fotos do pet nesta pasta com estes nomes (ou atualize os `src` em `index.html`):
+Arquivos usados em `index.html`:
 
-- `sasuke-1.jpg`
-- `sasuke-2.jpg`
-- `sasuke-3.jpg`
-- `sasuke-4.jpg`
+- `sasuke-01.jpeg` — hero + galeria
+- `sasuke-02.jpeg` … `sasuke-07.jpeg` — galeria
 
-Formatos sugeridos: JPG ou WebP. Preferência por fotos horizontais ou quadradas.
+Formatos: JPG/JPEG ou WebP.
