@@ -77,7 +77,7 @@ code {
   z-index: 20;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 1rem;
   min-height: var(--header-h);
   padding: 0.75rem 1.25rem;
@@ -86,23 +86,11 @@ code {
   border-bottom: 1px solid var(--line);
 }
 
-.logo {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 1.15rem;
-  color: var(--text);
-  text-decoration: none;
-}
-
-.logo:hover {
-  color: var(--accent);
-}
-
 .nav {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.65rem 1rem;
-  justify-content: flex-end;
+  gap: 0.65rem 1.5rem;
+  justify-content: center;
 }
 
 .nav a {
@@ -302,6 +290,11 @@ code {
 
 .prose {
   margin-top: 1.5rem;
+}
+
+#sasuke .prose {
+  max-width: 38rem;
+  margin-top: 2.5rem;
 }
 
 .prose p {
