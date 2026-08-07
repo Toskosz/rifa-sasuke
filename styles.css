@@ -201,11 +201,18 @@ code {
 
 /* Countdown */
 
+.countdown__heading {
+  margin: 2.25rem 0 0;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
 .countdown {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 0.65rem;
-  margin: 2rem auto 0;
+  margin: 1rem 0 0;
   max-width: 28rem;
 }
 
