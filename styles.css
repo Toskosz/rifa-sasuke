@@ -1,12 +1,20 @@
 :root {
-  --bg: #1a1714;
-  --bg-elevated: #24201c;
-  --bg-alt: #211d19;
-  --text: #f3ece3;
-  --text-muted: #b8aea2;
-  --accent: #e8a54b;
-  --accent-deep: #c47d28;
-  --line: rgba(243, 236, 227, 0.12);
+  /* Palette — derived from Sasuke’s fur, nose, and surroundings */
+  --cream: #f5f3ef;
+  --charcoal: #2c2723;
+  --rose: #e09a93;
+  --taupe: #7d736a;
+  --slate: #7b99ab;
+
+  --bg: var(--cream);
+  --bg-elevated: #ebe7e1;
+  --bg-alt: #ebe8e2;
+  --text: var(--charcoal);
+  --text-muted: var(--taupe);
+  --accent: var(--rose);
+  --accent-deep: #c9827b;
+  --accent-alt: var(--slate);
+  --line: color-mix(in srgb, var(--taupe) 28%, transparent);
   --font-display: "Fraunces", Georgia, serif;
   --font-body: "Nunito", system-ui, sans-serif;
   --radius: 14px;
@@ -40,21 +48,21 @@ img {
 }
 
 a {
-  color: var(--accent);
+  color: var(--accent-alt);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.2em;
 }
 
 a:hover {
-  color: #f0bf72;
+  color: color-mix(in srgb, var(--accent-alt) 80%, var(--charcoal));
 }
 
 code {
   font-size: 0.9em;
   padding: 0.1em 0.35em;
   border-radius: 6px;
-  background: rgba(232, 165, 75, 0.12);
-  color: var(--accent);
+  background: color-mix(in srgb, var(--slate) 16%, transparent);
+  color: color-mix(in srgb, var(--slate) 70%, var(--charcoal));
 }
 
 .visually-hidden {
@@ -81,7 +89,7 @@ code {
   gap: 1rem;
   min-height: var(--header-h);
   padding: 0.75rem 1.25rem;
-  background: rgba(26, 23, 20, 0.88);
+  background: color-mix(in srgb, var(--cream) 88%, transparent);
   backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
 }
@@ -120,17 +128,25 @@ code {
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(ellipse 80% 60% at 70% 20%, rgba(232, 165, 75, 0.22), transparent 55%),
-    radial-gradient(ellipse 70% 50% at 15% 85%, rgba(120, 78, 42, 0.35), transparent 50%),
-    linear-gradient(165deg, #2a241e 0%, #1a1714 45%, #14110e 100%);
+    radial-gradient(
+      ellipse 80% 60% at 70% 20%,
+      color-mix(in srgb, var(--rose) 22%, transparent),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse 70% 50% at 15% 85%,
+      color-mix(in srgb, var(--slate) 18%, transparent),
+      transparent 50%
+    ),
+    linear-gradient(165deg, #faf8f5 0%, var(--cream) 45%, #efebe5 100%);
   z-index: -2;
 }
 
 .hero__grain {
   position: absolute;
   inset: 0;
-  opacity: 0.35;
-  mix-blend-mode: soft-light;
+  opacity: 0.22;
+  mix-blend-mode: multiply;
   pointer-events: none;
   z-index: -1;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
@@ -158,6 +174,7 @@ code {
   font-weight: 700;
   line-height: 1.05;
   letter-spacing: -0.02em;
+  color: var(--charcoal);
 }
 
 .hero__lead {
@@ -181,7 +198,7 @@ code {
   padding: 0.85rem 0.4rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  background: rgba(36, 32, 28, 0.65);
+  background: color-mix(in srgb, #fff 55%, var(--cream));
 }
 
 .countdown__value {
@@ -226,7 +243,8 @@ code {
   font-weight: 700;
   font-size: 1rem;
   text-decoration: none;
-  transition: transform 0.25s var(--ease), background 0.2s ease, color 0.2s ease;
+  transition: transform 0.25s var(--ease), background 0.2s ease, color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .btn:hover {
@@ -235,23 +253,23 @@ code {
 
 .btn--primary {
   background: var(--accent);
-  color: #1a1714;
+  color: var(--charcoal);
 }
 
 .btn--primary:hover {
-  background: #f0bf72;
-  color: #1a1714;
+  background: var(--accent-deep);
+  color: var(--charcoal);
 }
 
 .btn--secondary {
   background: transparent;
-  color: var(--accent);
-  border: 1px solid rgba(232, 165, 75, 0.45);
+  color: var(--accent-alt);
+  border: 1px solid color-mix(in srgb, var(--slate) 45%, transparent);
 }
 
 .btn--secondary:hover {
-  background: rgba(232, 165, 75, 0.12);
-  color: #f0bf72;
+  background: color-mix(in srgb, var(--slate) 14%, transparent);
+  color: color-mix(in srgb, var(--slate) 75%, var(--charcoal));
 }
 
 /* Sections */
@@ -280,6 +298,7 @@ code {
   font-weight: 700;
   letter-spacing: -0.02em;
   line-height: 1.15;
+  color: var(--charcoal);
 }
 
 .section__lead {
@@ -304,6 +323,10 @@ code {
 
 .prose p:last-child {
   margin-bottom: 0;
+}
+
+.prose strong {
+  color: var(--charcoal);
 }
 
 /* Gallery */
@@ -331,7 +354,11 @@ code {
   border-radius: var(--radius);
   overflow: hidden;
   background:
-    linear-gradient(145deg, rgba(232, 165, 75, 0.12), transparent 55%),
+    linear-gradient(
+      145deg,
+      color-mix(in srgb, var(--rose) 12%, transparent),
+      transparent 55%
+    ),
     var(--bg-elevated);
   border: 1px solid var(--line);
 }
@@ -395,7 +422,7 @@ code {
   padding: 0.75rem 1rem;
   border: 1px solid var(--line);
   border-radius: 999px;
-  background: var(--bg-elevated);
+  background: #fff;
   color: var(--text);
   font: inherit;
 }
@@ -405,7 +432,7 @@ code {
 }
 
 .search input:focus {
-  outline: 2px solid rgba(232, 165, 75, 0.55);
+  outline: 2px solid color-mix(in srgb, var(--slate) 55%, transparent);
   outline-offset: 2px;
 }
 
@@ -424,14 +451,14 @@ code {
   max-height: min(70vh, 40rem);
   overflow: auto;
   padding: 0.15rem;
-  scrollbar-color: var(--accent-deep) transparent;
+  scrollbar-color: var(--taupe) transparent;
 }
 
 .number-card {
   padding: 0.7rem 0.65rem;
   border: 1px solid var(--line);
   border-radius: 10px;
-  background: var(--bg-elevated);
+  background: color-mix(in srgb, #fff 70%, var(--cream));
   min-width: 0;
 }
 
@@ -445,7 +472,7 @@ code {
   font-weight: 700;
   font-size: 1.15rem;
   line-height: 1.1;
-  color: var(--accent);
+  color: var(--accent-alt);
 }
 
 .number-card__owner {
