@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rifa Sasuke</title>
+    <meta
+      name="description"
+      content="Rifa Sasuke — acompanhe o contador, os números e o sorteio pela Loteria Federal."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="logo" href="#topo">Rifa Sasuke</a>
+      <nav class="nav" aria-label="Seções">
+        <a href="#fotos">Fotos</a>
+        <a href="#motivo">Motivo</a>
+        <a href="#numeros">Números</a>
+        <a href="#sorteio">Sorteio</a>
+      </nav>
+    </header>
+
+    <main>
+      <section id="topo" class="hero">
+        <div class="hero__wash" aria-hidden="true"></div>
+        <div class="hero__grain" aria-hidden="true"></div>
+        <div class="hero__content">
+          <p class="hero__eyebrow">Domingo, 09/08/2026 · 11h</p>
+          <h1 class="hero__brand">Rifa Sasuke</h1>
+          <p class="hero__lead">
+            Uma rifa especial pelo nosso companheiro. O resultado sai com a Loteria
+            Federal.
+          </p>
+
+          <div class="countdown" id="countdown" aria-live="polite">
+            <div class="countdown__unit">
+              <span class="countdown__value" data-unit="days">00</span>
+              <span class="countdown__label">dias</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" data-unit="hours">00</span>
+              <span class="countdown__label">horas</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" data-unit="minutes">00</span>
+              <span class="countdown__label">min</span>
+            </div>
+            <div class="countdown__unit">
+              <span class="countdown__value" data-unit="seconds">00</span>
+              <span class="countdown__label">seg</span>
+            </div>
+          </div>
+          <p class="countdown__done" id="countdown-done" hidden>
+            Sorteio em andamento — confira o resultado na Loteria Federal.
+          </p>
+
+          <a
+            class="btn btn--primary"
+            href="https://loterias.caixa.gov.br/Paginas/Federal.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Ver Loteria Federal
+          </a>
+        </div>
+      </section>
+
+      <section id="fotos" class="section reveal">
+        <div class="section__inner">
+          <h2>Fotos do Sasuke</h2>
+          <p class="section__lead">
+            Alguns momentos do nosso mascote — adicione as fotos em
+            <code>images/</code>.
+          </p>
+          <div class="gallery">
+            <!-- TODO: adicionar foto do Sasuke em images/sasuke-1.jpg -->
+            <figure class="gallery__item">
+              <div class="gallery__frame">
+                <img
+                  src="images/sasuke-1.jpg"
+                  alt="TODO: adicionar foto do Sasuke"
+                  data-placeholder="Sasuke 1"
+                />
+              </div>
+              <figcaption>Sasuke · foto 1</figcaption>
+            </figure>
+            <!-- TODO: adicionar foto do Sasuke em images/sasuke-2.jpg -->
+            <figure class="gallery__item">
+              <div class="gallery__frame">
+                <img
+                  src="images/sasuke-2.jpg"
+                  alt="TODO: adicionar foto do Sasuke"
+                  data-placeholder="Sasuke 2"
+                />
+              </div>
+              <figcaption>Sasuke · foto 2</figcaption>
+            </figure>
+            <!-- TODO: adicionar foto do Sasuke em images/sasuke-3.jpg -->
+            <figure class="gallery__item">
+              <div class="gallery__frame">
+                <img
+                  src="images/sasuke-3.jpg"
+                  alt="TODO: adicionar foto do Sasuke"
+                  data-placeholder="Sasuke 3"
+                />
+              </div>
+              <figcaption>Sasuke · foto 3</figcaption>
+            </figure>
+            <!-- TODO: adicionar foto do Sasuke em images/sasuke-4.jpg -->
+            <figure class="gallery__item">
+              <div class="gallery__frame">
+                <img
+                  src="images/sasuke-4.jpg"
+                  alt="TODO: adicionar foto do Sasuke"
+                  data-placeholder="Sasuke 4"
+                />
+              </div>
+              <figcaption>Sasuke · foto 4</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="motivo" class="section section--alt reveal">
+        <div class="section__inner section__inner--narrow">
+          <h2>Motivo da rifa</h2>
+          <p class="section__lead">Por que estamos fazendo esta rifa.</p>
+          <div class="prose">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+              ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+              aliquip ex ea commodo consequat.
+            </p>
+            <p>
+              Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+              cupidatat non proident, sunt in culpa qui officia deserunt mollit
+              anim id est laborum.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="numeros" class="section reveal">
+        <div class="section__inner">
+          <h2>Números e donos</h2>
+          <p class="section__lead">
+            Lista de exemplo com 300 números (0–299). Substitua os nomes em
+            <code>script.js</code> pela lista real.
+          </p>
+          <div class="numbers-toolbar">
+            <label class="search">
+              <span class="visually-hidden">Buscar número ou nome</span>
+              <input
+                type="search"
+                id="numbers-search"
+                placeholder="Buscar número ou nome…"
+                autocomplete="off"
+              />
+            </label>
+            <p class="numbers-meta" id="numbers-meta">300 números</p>
+          </div>
+          <div class="numbers-grid" id="numbers-grid" aria-live="polite"></div>
+        </div>
+      </section>
+
+      <section id="sorteio" class="section section--alt reveal">
+        <div class="section__inner section__inner--narrow">
+          <h2>Como funciona o sorteio</h2>
+          <p class="section__lead">
+            Dois prêmios, dois jogos da Caixa — de um jeito simples e justo.
+          </p>
+          <div class="prose">
+            <p>
+              No domingo, 09 de agosto de 2026, às 11h, olhamos os resultados
+              oficiais da Caixa. O <strong>1º lugar</strong> sai com o resultado
+              da <strong>Mega-Sena</strong>. O <strong>2º lugar</strong> sai com
+              o resultado da <strong>Lotofácil</strong>. Em ambos os casos,
+              “encaixamos” o número do jogo na quantidade de bilhetes da rifa
+              (300 números, de 0 a 299).
+            </p>
+            <p>
+              Na prática: dividimos aquele resultado pelo total de bilhetes e
+              usamos o que sobra dessa divisão. É como dar a volta na lista até
+              caber — o resto é o número vencedor. Por exemplo: se o resultado
+              usado for 1.234 e temos 300 bilhetes, 1.234 ÷ 300 dá 4 voltas
+              completas e sobram 34; então o ganhador daquela colocação é o
+              número 34.
+            </p>
+            <p>
+              Assim todo mundo tem a mesma chance, e qualquer pessoa pode
+              conferir sozinha no site da Caixa. Em caso de dúvida, valem os
+              resultados oficiais da Mega-Sena e da Lotofácil.
+            </p>
+          </div>
+          <a
+            class="btn btn--secondary"
+            href="https://loterias.caixa.gov.br/Paginas/Federal.aspx"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Abrir resultado da Federal
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Rifa Sasuke · sorteio 09/08/2026 às 11h</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
