@@ -232,6 +232,7 @@
     { number: 225, owner: "Otávio Frederico Francisco de Brito" },
     { number: 226, owner: "Otávio Frederico Francisco de Brito" },
     { number: 227, owner: "Dagoberto Faria Gomes" },
+    { number: 228, owner: "Dagoberto Faria Gomes" },
   ];
 
   /** @returns {{ number: number, owner: string }[]} */
