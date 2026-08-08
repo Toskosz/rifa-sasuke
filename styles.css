@@ -491,8 +491,19 @@ code {
 
 /* Invoices / costs */
 
+#custos h2,
+#custos .section__lead,
+#custos .prose {
+  text-align: center;
+  margin-inline: auto;
+}
+
 #custos .prose {
   max-width: 38rem;
+}
+
+#custos .prose p {
+  text-align: center;
 }
 
 .invoices {
@@ -576,6 +587,7 @@ code {
   font-size: 0.9rem;
   color: var(--text-muted);
   line-height: 1.4;
+  text-align: justify;
 }
 
 .invoices__sum {
