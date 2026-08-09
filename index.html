@@ -6,7 +6,7 @@
     <title>Rifa Sasuke</title>
     <meta
       name="description"
-      content="Rifa Sasuke — acompanhe o contador, os números e o sorteio pela Loteria Federal."
+      content="Rifa Sasuke — veja os ganhadores, os números e como foi o sorteio pela Caixa."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -350,43 +350,41 @@ Por isso, continuamos pedindo que vocês mandem muitas energias boas e continuem
             </p>
           </div>
 
-          <p class="countdown__heading">Contagem para o sorteio · domingo, 09/08/2026 · 11h</p>
-          <div class="countdown" id="countdown" aria-live="polite">
-            <div class="countdown__unit">
-              <span class="countdown__value" data-unit="days">00</span>
-              <span class="countdown__label">dias</span>
-            </div>
-            <div class="countdown__unit">
-              <span class="countdown__value" data-unit="hours">00</span>
-              <span class="countdown__label">horas</span>
-            </div>
-            <div class="countdown__unit">
-              <span class="countdown__value" data-unit="minutes">00</span>
-              <span class="countdown__label">min</span>
-            </div>
-            <div class="countdown__unit">
-              <span class="countdown__value" data-unit="seconds">00</span>
-              <span class="countdown__label">seg</span>
-            </div>
+          <p class="winners__heading">Ganhadores · sorteio 09/08/2026</p>
+          <div class="winners" aria-live="polite">
+            <article class="winners__card">
+              <p class="winners__place">1º lugar</p>
+              <p class="winners__ticket">136</p>
+              <p class="winners__name">Thiago Lagares</p>
+              <p class="winners__source">16.821 ÷ 235 → resto 136</p>
+            </article>
+            <article class="winners__card">
+              <p class="winners__place">2º lugar</p>
+              <p class="winners__ticket">144</p>
+              <p class="winners__name">Thiago Lagares</p>
+              <p class="winners__source">77.694 ÷ 235 → resto 144</p>
+            </article>
           </div>
-          <p class="countdown__done" id="countdown-done" hidden>
-            Sorteio em andamento — confira o resultado na Loteria Federal.
+
+          <p class="winners__thanks">
+            Obrigado a todos que participaram. Cada bilhete ajudou o Sasuke — e
+            isso a gente não esquece.
           </p>
 
           <a
             class="btn btn--secondary"
-            href="https://loterias.caixa.gov.br/Paginas/Federal.aspx"
+            href="https://loterias.caixa.gov.br/Paginas/Internet.aspx"
             target="_blank"
             rel="noopener noreferrer"
           >
-            Abrir resultado da Federal
+            Conferir resultados na Caixa
           </a>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <p>Rifa Sasuke · sorteio 09/08/2026 às 11h</p>
+      <p>Rifa Sasuke · sorteio realizado em 09/08/2026</p>
     </footer>
 
     <script src="script.js"></script>

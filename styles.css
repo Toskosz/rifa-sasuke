@@ -240,42 +240,33 @@ code {
   text-align: justify;
 }
 
-/* Countdown */
+/* Winners */
 
-.countdown__heading {
+.winners__heading {
   margin: 2.25rem 0 0;
   font-size: 0.95rem;
   font-weight: 700;
   color: var(--text-muted);
 }
 
-.countdown {
+.winners {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.65rem;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.85rem;
   margin: 1rem 0 0;
-  max-width: 28rem;
+  max-width: 32rem;
 }
 
-.countdown__unit {
-  padding: 0.85rem 0.4rem;
+.winners__card {
+  margin: 0;
+  padding: 1.1rem 1rem 1.15rem;
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: color-mix(in srgb, #fff 55%, var(--cream));
 }
 
-.countdown__value {
-  display: block;
-  font-family: var(--font-display);
-  font-size: clamp(1.6rem, 5vw, 2.2rem);
-  font-weight: 700;
-  line-height: 1.1;
-  color: var(--text);
-}
-
-.countdown__label {
-  display: block;
-  margin-top: 0.25rem;
+.winners__place {
+  margin: 0;
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.06em;
@@ -283,14 +274,34 @@ code {
   color: var(--text-muted);
 }
 
-.countdown__done {
-  margin: 1.5rem 0 0;
+.winners__ticket {
+  margin: 0.45rem 0 0;
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 6vw, 2.6rem);
   font-weight: 700;
-  color: var(--accent);
+  line-height: 1.1;
+  color: var(--text);
 }
 
-.countdown.is-done {
-  display: none;
+.winners__name {
+  margin: 0.35rem 0 0;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--accent-deep);
+}
+
+.winners__source {
+  margin: 0.55rem 0 0;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.winners__thanks {
+  margin: 1.75rem 0 0;
+  max-width: 28rem;
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: var(--text);
 }
 
 /* Buttons */
@@ -757,11 +768,7 @@ code {
     font-size: 0.8rem;
   }
 
-  .countdown {
-    gap: 0.45rem;
-  }
-
-  .countdown__unit {
-    padding: 0.7rem 0.25rem;
+  .winners {
+    grid-template-columns: 1fr;
   }
 }

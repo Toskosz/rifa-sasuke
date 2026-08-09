@@ -1,8 +1,6 @@
 (() => {
   "use strict";
 
-  const DRAW_AT = new Date("2026-08-09T11:00:00-03:00");
-
   const RAFFLE_ENTRIES = [
     { number: 0, owner: "Matheus Endo" },
     { number: 1, owner: "Maivê Masera" },
@@ -246,36 +244,6 @@
     return RAFFLE_ENTRIES;
   }
 
-  function pad2(value) {
-    return String(value).padStart(2, "0");
-  }
-
-  function updateCountdown() {
-    const root = document.getElementById("countdown");
-    const done = document.getElementById("countdown-done");
-    if (!root || !done) return;
-
-    const diff = DRAW_AT.getTime() - Date.now();
-
-    if (diff <= 0) {
-      root.classList.add("is-done");
-      done.hidden = false;
-      return;
-    }
-
-    const totalSeconds = Math.floor(diff / 1000);
-    const days = Math.floor(totalSeconds / 86400);
-    const hours = Math.floor((totalSeconds % 86400) / 3600);
-    const minutes = Math.floor((totalSeconds % 3600) / 60);
-    const seconds = totalSeconds % 60;
-
-    const map = { days, hours, minutes, seconds };
-    for (const [unit, value] of Object.entries(map)) {
-      const el = root.querySelector(`[data-unit="${unit}"]`);
-      if (el) el.textContent = pad2(value);
-    }
-  }
-
   function setupPhotoPlaceholders() {
     document.querySelectorAll(".gallery__frame img").forEach((img) => {
       const frame = img.closest(".gallery__frame");
@@ -374,8 +342,6 @@
     items.forEach((el) => observer.observe(el));
   }
 
-  updateCountdown();
-  setInterval(updateCountdown, 1000);
   setupPhotoPlaceholders();
   renderNumbers(buildEntries());
   setupReveal();
